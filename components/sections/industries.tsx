@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Building2, ShoppingBag, Stethoscope, GraduationCap, Users, Briefcase, Shield, Globe2, Rocket, LayoutGrid } from "lucide-react";
 import { motion } from "framer-motion";
 
-const gradients = {
+const gradients: Record<string, string> = {
   social: "from-blue-500/10 via-indigo-500/5 to-violet-500/10 hover:from-blue-500/20 hover:to-violet-500/20",
   ecommerce: "from-emerald-500/10 via-green-500/5 to-teal-500/10 hover:from-emerald-500/20 hover:to-teal-500/20",
   healthcare: "from-rose-500/10 via-pink-500/5 to-red-500/10 hover:from-rose-500/20 hover:to-red-500/20",
@@ -18,7 +18,7 @@ const gradients = {
 };
 
 // Dark mode enhancements
-const darkGradients = {
+const darkGradients: Record<string, string> = {
   social: "dark:from-blue-500/20 dark:via-indigo-500/10 dark:to-violet-500/20 dark:hover:from-blue-500/30 dark:hover:to-violet-500/30",
   ecommerce: "dark:from-emerald-500/20 dark:via-green-500/10 dark:to-teal-500/20 dark:hover:from-emerald-500/30 dark:hover:to-teal-500/30",
   healthcare: "dark:from-rose-500/20 dark:via-pink-500/10 dark:to-red-500/20 dark:hover:from-rose-500/30 dark:hover:to-red-500/30",
