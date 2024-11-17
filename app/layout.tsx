@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/images/logo.png" />
-        <title>TechVision - Transforming Ideas into Digital Reality</title>
+        <link rel="icon" href="/images/Logo.png" />
+        <title>Lumovate Intelligence - Transforming Ideas into Digital Reality</title>
       </head>
       <body className={cn(
         inter.className,
@@ -51,16 +51,16 @@ export default function RootLayout({
                   transition={{ duration: 0.5 }}
                   onClick={() => scrollToSection('home')}
                 >
-                  <div className="relative w-8 h-8">
+                  <div className="relative w-32 h-32">
                     <Image
-                      src="/images/logo.png"
-                      alt="TechVision Logo"
+                      src="/images/LogoWithText.png"
+                      alt="Lumovate Intelligence Logo"
                       fill
                       className="object-contain"
                     />
                     <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
                   </div>
-                  <span className="text-xl font-bold">TechVision</span>
+                  {/* <span className="text-xl font-bold">Lumovate Intelligence</span> */}
                 </motion.button>
                 <nav className="hidden md:flex items-center gap-6">
                   {navLinks.map((link, index) => (
@@ -95,6 +95,7 @@ export default function RootLayout({
 function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) {
   const quickLinks = [
     { href: "services", label: "Services" },
+    { href: "process", label: "Dev Process" },
     { href: "tech-stack", label: "Technologies" },
     { href: "projects", label: "Projects" },
     { href: "about", label: "About" },
@@ -114,18 +115,18 @@ function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) 
     <footer className="bg-gradient-to-br from-background/50 to-muted/50 backdrop-blur-sm py-12 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+          <div className="w-full md:w-[80%]">
             <div className="flex items-center gap-2 mb-4">
-              <div className="relative w-8 h-8">
+              <div className="relative w-[90%] md:w-full h-24">
                 <Image
-                  src="/images/logo.png"
-                  alt="TechVision Logo"
+                  src="/images/LogoWithText.png"
+                  alt="Lumovate Intelligence Logo"
                   fill
                   className="object-contain"
                 />
                 <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
               </div>
-              <span className="text-xl font-bold">TechVision</span>
+              {/* <span className="text-xl font-bold">Lumovate Intelligence</span> */}
             </div>
             <p className="text-muted-foreground mb-4">
               Transforming businesses through innovative technology solutions.
@@ -171,17 +172,18 @@ function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) 
             <ul className="space-y-4">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
-                info@techvision.com
+                info@lumovateintelligence.com
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
-                +1 (555) 123-4567
+                +91 6378298502
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <span>
-                  123 Innovation Street<br />
-                  San Francisco, CA 94105
+                  Bijarniya Farm House, Naya bas<br />
+                  Dudhwa, Sikar <br/>
+                  Rajasthan, India - 332406
                 </span>
               </li>
             </ul>
@@ -189,7 +191,7 @@ function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) 
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TechVision Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Lumovate Intelligence Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

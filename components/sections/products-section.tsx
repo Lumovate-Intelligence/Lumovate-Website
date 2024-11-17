@@ -5,6 +5,9 @@ import { ArrowUpRight, Sparkles, Scan, MessageSquareText } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { FaGooglePlay } from "react-icons/fa";
+import { AiOutlineApple } from "react-icons/ai";
+import { GoGlobe } from "react-icons/go";
 
 interface ProductShowcaseProps {
   title: string;
@@ -23,7 +26,46 @@ function AppStoreButtons({ hasPlayStore, hasAppStore }: { hasPlayStore?: boolean
 
   return (
     <div className="flex flex-col gap-4 mt-4">
-      {hasPlayStore && (
+      <Button 
+        asChild 
+        size="lg" 
+        className="w-full gap-2 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 shadow-lg"
+      >
+        <a 
+          href="https://play.google.com/store" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
+          <FaGooglePlay className="w-5 h-5" />
+          <div className="flex flex-col items-start ml-2">
+            <span className="text-xs">GET IT ON</span>
+            <span className="text-sm font-semibold">Google Play</span>
+          </div>
+          <ArrowUpRight className="w-4 h-4 ml-auto" />
+        </a>
+      </Button>
+
+      <Button 
+        asChild 
+        size="lg" 
+        className="w-full gap-2 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 shadow-lg"
+      >
+        <a 
+          href="https://apps.apple.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
+          <AiOutlineApple className="w-5 h-5" />
+          <div className="flex flex-col items-start ml-2">
+            <span className="text-xs">Download on the</span>
+            <span className="text-sm font-semibold">App Store</span>
+          </div>
+          <ArrowUpRight className="w-4 h-4 ml-auto" />
+        </a>
+      </Button>
+      {/* {hasPlayStore && (
         <div className="relative">
           <a className="block hover:opacity-80 transition-opacity cursor-not-allowed">
             <Image
@@ -43,7 +85,7 @@ function AppStoreButtons({ hasPlayStore, hasAppStore }: { hasPlayStore?: boolean
         <div className="relative">
           <a className="block hover:opacity-80 transition-opacity cursor-not-allowed">
             <Image
-              src="/images/app-store-badge.svg"
+              src="/images/app-store-badge.png"
               alt="Download on the App Store"
               width={250}
               height={83}
@@ -54,7 +96,7 @@ function AppStoreButtons({ hasPlayStore, hasAppStore }: { hasPlayStore?: boolean
             </Badge>
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
@@ -138,13 +180,42 @@ export function ProductsSection() {
                             className="w-full gap-2 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 shadow-lg"
                           >
                             <a href={product.link} target="_blank" rel="noopener noreferrer">
+                            <GoGlobe className="w-5 h-5" />
                               Visit Website <ArrowUpRight className="w-4 h-4" />
                             </a>
                           </Button>
-                          <AppStoreButtons 
+                          <Button 
+                            asChild 
+                            size="lg" 
+                            className="w-full gap-2 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 shadow-lg"
+                          >
+                            <a href={product.link} target="_blank" rel="noopener noreferrer">
+                            <FaGooglePlay className="w-5 h-5" />
+                            <div className="flex flex-col items-start ml-2">
+                              <span className="text-xs">GET IT ON</span>
+                              <span className="text-sm font-semibold">Google Play</span>
+                            </div>
+                            <ArrowUpRight className="w-4 h-4" />
+                            </a>
+                          </Button>
+                          <Button 
+                            asChild 
+                            size="lg" 
+                            className="w-full gap-2 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 shadow-lg"
+                          >
+                            <a href={product.link} target="_blank" rel="noopener noreferrer">
+                            <AiOutlineApple className="w-5 h-5" />
+                            <div className="flex flex-col items-start ml-2">
+                              <span className="text-xs">Download on the</span>
+                              <span className="text-sm font-semibold">App Store</span>
+                            </div>
+                            <ArrowUpRight className="w-4 h-4" />
+                            </a>
+                          </Button>
+                          {/* <AppStoreButtons 
                             hasPlayStore={product.hasPlayStore} 
                             hasAppStore={product.hasAppStore} 
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
@@ -173,9 +244,7 @@ const products: ProductShowcaseProps[] = [
       "Cross-platform compatibility"
     ],
     images: [
-      "/images/purelyscan-1.jpg",
-      "/images/purelyscan-2.jpg",
-      "/images/purelyscan-3.jpg",
+      "/images/purelyscan-1.png",
     ],
     link: "https://purelyscan.com",
     gradient: "bg-gradient-to-br from-cyan-500/30 via-cyan-500/20 to-blue-600/30 hover:from-cyan-500/40 hover:to-blue-600/40 dark:from-cyan-500/40 dark:via-cyan-500/30 dark:to-blue-600/40 dark:hover:from-cyan-500/50 dark:hover:to-blue-600/50",
@@ -195,9 +264,7 @@ const products: ProductShowcaseProps[] = [
       "Enterprise-grade security"
     ],
     images: [
-      "/images/lumochat-1.jpg",
-      "/images/lumochat-2.jpg",
-      "/images/lumochat-3.jpg",
+      "/images/lumochat-1.png",
     ],
     link: "https://lumochat.com",
     gradient: "bg-gradient-to-br from-violet-500/30 via-violet-500/20 to-purple-600/30 hover:from-violet-500/40 hover:to-purple-600/40 dark:from-violet-500/40 dark:via-violet-500/30 dark:to-purple-600/40 dark:hover:from-violet-500/50 dark:hover:to-purple-600/50",

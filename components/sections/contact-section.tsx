@@ -94,7 +94,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 mx-auto">
           <motion.div 
             className="space-y-8"
             initial={{ opacity: 0, x: -20 }}
@@ -106,8 +106,8 @@ export function ContactSection() {
               <div>
                 <h3 className="font-semibold mb-2">Visit Us</h3>
                 <p className="text-muted-foreground">
-                  123 Innovation Street<br />
-                  San Francisco, CA 94105
+                  Bijarniya Farm House, Naya Bas<br />
+                  Dudhwa, Sikar, RJ - 332406
                 </p>
               </div>
             </Card>
@@ -117,8 +117,8 @@ export function ContactSection() {
               <div>
                 <h3 className="font-semibold mb-2">Email Us</h3>
                 <p className="text-muted-foreground">
-                  info@techvision.com<br />
-                  support@techvision.com
+                  info@lumovateintelligence.com<br />
+                  support@lumovateintelligence.com
                 </p>
               </div>
             </Card>
@@ -128,8 +128,8 @@ export function ContactSection() {
               <div>
                 <h3 className="font-semibold mb-2">Call Us</h3>
                 <p className="text-muted-foreground">
-                  +1 (555) 123-4567<br />
-                  Mon - Fri, 9am - 6pm PST
+                  +91 6378298502<br />
+                  Mon - Fri, 9am - 6pm IST
                 </p>
               </div>
             </Card>
@@ -198,7 +198,7 @@ export function ContactSection() {
                         <FormLabel>Phone (Optional)</FormLabel>
                         <FormControl>
                           <Input 
-                            placeholder="+1 (555) 123-4567" 
+                            placeholder="+91 0000000000" 
                             {...field}
                             className="bg-background/50 backdrop-blur-sm border-white/10 focus:border-primary/50"
                           />
@@ -217,7 +217,7 @@ export function ContactSection() {
                         <FormControl>
                           <Textarea 
                             placeholder="Tell us about your project..."
-                            className="min-h-[120px] bg-background/50 backdrop-blur-sm border-white/10 focus:border-primary/50"
+                            className="min-h-[165px] bg-background/50 backdrop-blur-sm border-white/10 focus:border-primary/50"
                             {...field}
                           />
                         </FormControl>

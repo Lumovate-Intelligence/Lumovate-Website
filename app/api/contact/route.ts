@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     });
 
     const mailOptions = {
-      from: `"TechVision Contact" <${process.env.EMAIL_USER}>`,
+      from: `"Lumovate Intelligence Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_RECIPIENT || process.env.EMAIL_USER,
       subject: `New Contact Form Submission from ${name}`,
       html: `

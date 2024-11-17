@@ -9,7 +9,7 @@ export function AboutSection() {
     <section className="py-24 relative bg-gradient-to-br from-primary/10 via-blue-500/10 to-violet-500/10">
       <div className="absolute inset-0 bg-grid-white/10 opacity-50" />
       <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto">
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ export function AboutSection() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               About{" "}
-              <span className="gradient-text">TechVision</span>
+              <span className="gradient-text">Lumovate Intelligence</span>
             </h2>
             <p className="text-muted-foreground">
               Building the Future of Digital Innovation
@@ -32,7 +32,7 @@ export function AboutSection() {
               transition={{ delay: 0.2 }}
             >
               <p className="mb-6 text-lg leading-relaxed">
-                TechVision is a forward-thinking software development company dedicated to transforming businesses through innovative technology solutions. We believe in pushing the boundaries of what's possible in the digital realm while maintaining a strong focus on delivering real business value.
+                Lumovate Intelligence is a forward-thinking software development company dedicated to transforming businesses through innovative technology solutions. We believe in pushing the boundaries of what's possible in the digital realm while maintaining a strong focus on delivering real business value.
               </p>
             </motion.div>
 
