@@ -3,13 +3,14 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Menu, X  } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Providers } from './providers';
 import { Toaster } from "@/components/ui/toaster";
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
 }) {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false);
   };
 
   const navLinks = [
@@ -29,6 +31,8 @@ export default function RootLayout({
     { href: "about", label: "About" },
     { href: "contact", label: "Contact" }
   ];
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
@@ -41,7 +45,7 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased"
       )}>
         <Providers>
-          <header className="fixed top-0 w-full z-50 navbar">
+        <header className="fixed top-0 w-full z-50 navbar">
             <div className="container mx-auto px-4">
               <div className="flex h-16 items-center justify-between">
                 <motion.button 
@@ -78,8 +82,51 @@ export default function RootLayout({
                   ))}
                   <ThemeToggle />
                 </nav>
+
+                <nav className="md:hidden flex items-center gap-2">
+                  {/* {navLinks.map((link, index) => (
+                    <motion.button
+                      key={link.href}
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-sm font-medium hover:text-primary transition-colors relative group"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      {link.label}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                    </motion.button>
+                  ))} */}
+                  <ThemeToggle />
+                  {menuOpen ? (
+                    <X className="w-6 h-6" onClick={()=>setMenuOpen(false)} />
+                  ) : (
+                    <Menu className="w-6 h-6" onClick={()=>setMenuOpen(true)} />
+                  )}
+                </nav>
               </div>
             </div>
+            {menuOpen && (
+              <motion.nav
+                className="md:hidden px-6 bg-background shadow absolute top-full left-0 w-full"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ul className="flex flex-col items-start gap-4 py-4">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <button
+                        onClick={() => scrollToSection(link.href)}
+                        className="text-sm font-medium hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </motion.nav>
+            )}
           </header>
           <div className="enhanced-gradient min-h-screen">
             {children}
