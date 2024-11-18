@@ -191,7 +191,7 @@ function Footer({ scrollToSection }: { scrollToSection: (id: string) => void }) 
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Lumovate Intelligence Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Lumovate Intelligence. All rights reserved.</p>
         </div>
       </div>
     </footer>
