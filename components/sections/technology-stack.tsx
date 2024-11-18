@@ -148,7 +148,8 @@ const techStacks: TechCategory[] = [
 
 export function TechnologyStack() {
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 via-blue-500/5 to-violet-500/5">
+    <section className="py-24 relative bg-gradient-to-br from-primary/5 via-blue-500/5 to-violet-500/5">
+      <div className="absolute inset-0 bg-grid-white/10 opacity-50" />
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"

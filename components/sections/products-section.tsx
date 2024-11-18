@@ -103,7 +103,8 @@ function AppStoreButtons({ hasPlayStore, hasAppStore }: { hasPlayStore?: boolean
 
 export function ProductsSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/10 via-blue-500/10 to-violet-500/10">
+    <section className="py-24 relative bg-gradient-to-br from-primary/10 via-blue-500/10 to-violet-500/10">
+      <div className="absolute inset-0 bg-grid-white/10 opacity-50" />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.div

@@ -8,6 +8,7 @@ import { TechnologyStack } from "@/components/sections/technology-stack";
 import { ProductsSection } from "@/components/sections/products-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { OurTrustPillars } from "@/components/sections/trust-section";
 
 export default function Home() {
   return (
@@ -38,6 +39,10 @@ export default function Home() {
 
       <section id="about">
         <AboutSection />
+      </section>
+
+      <section id="authenticity">
+        <OurTrustPillars />
       </section>
 
       <section id="contact">

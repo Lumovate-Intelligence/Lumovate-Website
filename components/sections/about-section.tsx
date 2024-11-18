@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 export function AboutSection() {
   return (
-    <section className="py-24 relative bg-gradient-to-br from-primary/10 via-blue-500/10 to-violet-500/10">
+    <section className="py-24 relative bg-gradient-to-br from-gray-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <div className="absolute inset-0 bg-grid-white/10 opacity-50" />
       <div className="container mx-auto px-4 relative">
         <div className="mx-auto">
